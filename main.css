@@ -1,0 +1,498 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4{
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+}
+
+h2, h3, h4{
+  color: #42f4ee;
+
+}
+
+#splash-container{
+    height: 100vh;
+    width: 100%;
+}
+
+body{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    background-color: #222;
+}
+
+#splash{
+    background: url("img/cover.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+#splash-panel-container{
+    color: white;
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#splash-panel{
+    width: 60%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    font-size: 18pt;
+    font-family: "Roboto" sans-serif;
+    font-weight: 300;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+#splash-panel h2{
+    align-self: center;
+}
+
+#splash-panel ul{
+    list-style-type: none;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#splash-panel li{
+    display: inline-block;
+    margin-left: 10px;
+}
+
+#splash-arrow{
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: calc(100vh - 80px);
+    align-self: flex-end;
+    text-align: center;
+    font-size: 26pt;
+}
+
+navbar{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    font-family: "Raleway", sans-serif;
+    white-space: nowrap;
+    background-color: #222;
+  }
+
+#nav-header{
+    padding: 20px;
+    max-width: 40%;
+}
+
+#desktop-nav li, #hamburger-menu{
+    display: inline-block;
+    margin: 0 20px;
+}
+
+#desktop-nav li a{
+    font-size: 14pt;
+    border: 2px solid #42f4ee;
+    border-radius: 20px 0;
+    padding: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+#desktop-nav li :hover{
+    background: #42f4ee;
+    color: #222;
+}
+
+#home-hover li :hover{
+    color: #97BCE6;
+}
+
+#desktop-nav a, footer a{
+    color: white;
+}
+
+/* responsive navbar code */
+
+#mobile-nav{
+    height: calc(100vh - 76px);
+    width: 100%;
+    display: none;
+}
+
+#hamburger-menu, #hamburger-menu-home{
+    display: none;
+    cursor: pointer;
+    height: 23px;
+    width: 23px;
+}
+
+.menu-closed{
+    background-image: url("img/icons/menu.png");
+}
+
+.menu-closed:hover{
+    background-position: 23px 0;
+}
+
+.menu-open{
+    background-image: url("img/icons/menu.png");
+    background-position: 0 23px;
+}
+
+.menu-open:hover{
+    background-position: 23px 23px;
+}
+
+#mobile-nav ul{
+    height: 100%;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    list-style-type: none;
+    text-align: center;
+}
+
+#mobile-nav ul li{
+    padding: 10px;
+}
+
+#mobile-nav li a{
+    color: white;
+    font-size: 60pt;
+    text-decoration: none;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+}
+
+#mobile-nav li a:hover{
+    color: #42f4ee;
+}
+
+.light{
+    background-color: #444;
+}
+
+.homepage-nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+}
+
+.homepage-nav-mobile{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #222;
+}
+
+.home-margin{
+    margin-top: 76px;
+}
+
+#about-me-pic{
+  float: right;
+  height: 300px;
+  width: auto;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+@media screen and (max-width: 850px){
+    #desktop-nav{
+        display: none;
+    }
+
+    #hamburger-menu{
+        display: inline-block;
+    }
+
+    #music-container{
+        flex-direction: column;
+    }
+
+    .music-section{
+        min-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .bucket-list-item{
+        flex-direction: column;
+        margin-left: -60px;
+    }
+
+    .bucket-list-item-left{
+        margin-bottom: 10px;
+    }
+
+    .bucket-list-item-left, .bucket-list-item-right{
+        min-width: 100%;
+    }
+
+    #splash-text p{
+        font-size: 40pt;
+        padding: 60px 0;
+    }
+
+    footer li a svg{
+        display: none;
+    }
+
+    footer a{
+        font-size: 14pt;
+    }
+
+    #icon-source{
+        display: none;
+    }
+
+    #about-me-pic{
+        height: 200px;
+    }
+
+    #splash h2{
+        text-align: center;
+    }
+
+    #splash ul li{
+        padding: 10px;
+    }
+
+    #splash ul{
+        padding: 0;
+        display: inline;
+    }
+
+    #splash-panel{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    navbar{
+        font-size: 9pt
+    }
+
+    navbar img{
+        height: 17px;
+        width: 17px;
+    }
+
+    #mobile-nav li a{
+        font-size: 50pt;
+    }
+
+    #mobile-nav{
+        height: calc(100vh - 68px);
+    }
+
+    footer li a{
+        font-size: 11pt;
+    }
+
+    footer ul{
+        padding: 5px;
+    }
+
+}
+
+@media screen and (min-width: 850px) {
+    #desktop-nav{
+        display: inline-block;
+    }
+
+    #hamburger-menu{
+        display: none;
+    }
+}
+
+/* bucket list stuff */
+
+.container{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    background-color: #333;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container h2{
+  padding: 20px;
+}
+
+
+.page-content{
+    background-color: #444;
+    padding: 20px;
+    font-size: 16pt;
+    overflow: hidden;
+}
+
+.page-content ul{
+    list-style: decimal;
+    margin-left: 20px;
+}
+
+.page-content li{
+    padding: 10px;
+}
+
+.page-content li a{
+    cursor: pointer;
+}
+
+.page-content li a:hover{
+    color: #42f4ee;
+}
+
+.bucket-list-item{
+    padding: 20px;
+    display: flex;
+}
+
+.bucket-list-item img{
+    max-width: 100%;
+    height: auto;
+}
+
+.bucket-list-item-left,.bucket-list-item-right{
+    background-color: #555;
+    padding: 20px;
+    width: 50%;
+
+}
+
+.bucket-list-item-left{
+    margin-right: 20px;
+}
+
+/* icons from here http://www.flaticon.com/packs/flat-lines */
+
+video{
+    max-width: 100%;
+}
+
+button{
+    border: 0;
+    padding: 10px;
+    font-family: "Roboto";
+    font-weight: 300;
+    color: white;
+    font-size: 18pt;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+#previous{
+    margin-right: 20px;
+}
+
+#previous, #next{
+    width: 50%;
+    background-color: #222;
+}
+
+
+#previous:hover, #next:hover{
+    background-color: #333;
+    cursor: pointer;
+}
+
+.images img{
+    margin-bottom: 10px;
+}
+
+.yes img, .no img{
+  margin-right: 10px;
+}
+
+#music-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.music-section{
+    width: 25%;
+    margin-right: 20px;
+
+}
+
+.music-section p, .music-section h4{
+    margin-bottom: 20px;
+}
+
+#music-container :last-child{
+    margin-right: 0;
+}
+
+footer{
+    background-color: #222;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+footer ul{
+    display: flex;
+    list-style-type: none;
+    padding: 20px;
+    justify-content: space-between;
+    color: white;
+    font-size: 20pt;
+    font-family: "Raleway", sans-serif;
+}
+
+footer a{
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: #42f4ee;
+}
+
+footer a:hover .logo{
+    fill: #42f4ee;
+}
+
+footer svg{
+    height: 24px;
+    width: 24px;
+}
+
+#icon-source{
+    font-family: "Roboto", sans-serif;
+    font-size: 8pt;
+    font-weight: 300;
+    color: #666;
+    padding: 2px;
+    text-align: center;
+    margin-top: -20px;
+}
+
+#slide{
+    margin-top: 10px;
+}
