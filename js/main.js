@@ -10,6 +10,16 @@ $(".page-content a").click(function(){
 
 });
 
+//Work tile slide code
+
+$(".work-tile").hover(function(){
+
+    $(this).find(".work-title").slideToggle();
+    $(this).find(".work-info").slideToggle();
+    $(this).find(".work-info").css("display", "flex");
+});
+
+
 //Hamburger menu code
 
 $("#hamburger-menu, #hamburger-menu-home").click(function(){
